@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { LatestMovies, Originals, PopularMovies } from './url';
 import Movielistings from './navitems/movielistings';
 import Banner from './navitems/banner';
+import Moviedetails from './Moviedetails';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
       <Route path='/originals' element={<Movielistings url={Originals}/>}></Route>
       <Route path='/popular' element={<Movielistings url={PopularMovies}/>}></Route>
       <Route path='/latest' element={<Movielistings url={LatestMovies}/>}></Route>
+      <Route path='/moviedetails/:id' element={<Moviedetails/>}></Route>
     </Routes>
     </BrowserRouter>
   </React.StrictMode>
